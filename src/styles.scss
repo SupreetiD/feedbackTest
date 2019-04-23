@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: #EFF2F7;
+}
+.feedback-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  padding: 20px 40px;
+  margin: 20px;
+  height: auto;
+  background: #fff;
+}
+
+.feedback-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.feedback-page {
+  background: #fff;
+  padding: 20px 40px;
+  height: 100vh;
+}
+
+.content {
+  padding: 2px 16px;
+}
+
+.card-container {
+  display: flex;
+  text-align: left;
+  width: 100%;
+}
+
+.feedback-card img {
+    float: left;
+    margin-right: 2%;
+    border-radius:50%;
+    width:120px;
+    height:120px;
+    margin: auto;
+}
+
+section {
+          margin-top: 10px;
+          margin: auto;
+          h1 {
+            font-weight: 100;
+            font-size: 22px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 16px;
+            letter-spacing: .5px;
+            line-height: 1;
+          }
+          .separator {
+            width: 6px;
+            height: 155px;
+            background: #3137aa;
+            margin-right: 20px;
+          }
+          .user-review {
+            font-size: 17px;
+          }
+        }

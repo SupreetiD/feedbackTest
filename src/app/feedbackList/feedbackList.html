@@ -1,0 +1,30 @@
+<div class="title" style="text-align:center;">
+  <h1> Feedbacks! </h1>
+</div>
+<section class="hero is-primary is-bold">
+<div class="hero-body">
+<div class="image container" style="text-align:center">
+  <img width="100%" height="400px;" alt="feedback-image" src="http://facebook-advertising-guide.com/wp-content/uploads/2018/11/customer_feedback-01-1024x616.png">
+</div>
+<div class="content">
+  <span class="container card-container" *ngFor='let feedback of feedbacks; trackBy: index;'>
+      <div class="feedback-card feedback-{{feedback.id}}" (click)="onSelect(feedback);" attr.data-account-id="{{ feedback.id }}">
+        <div class="row">
+         <img src="{{feedback.user.picture_url}}" alt="logo"/>
+         <section class='user-identity col-md-4'>
+           <h1 class="user-name">{{ feedback.user.fullname }}</h1>
+           <p *ngIf='feedback.user.country'><b>Country:</b> {{ feedback.user.country.translations[0].name }}</p>
+           <p><b>Speciality:</b> {{ feedback.user.specialty.translations[0].name }}</p>
+         </section>
+         <section class="separator">
+         </section>
+         <section class='user-review col-md-6'>
+           <i><b>Review:</b> {{ feedback.translations[0].content }}</i>
+         </section>
+         </div>
+      </div>
+    </span>
+  </div>
+</div>
+<h1>{{singleFeedback.id}}</h1>
+</section>
