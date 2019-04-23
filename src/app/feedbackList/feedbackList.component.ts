@@ -25,7 +25,6 @@ export class FeedbackListComponent implements OnInit {
     this.feedbackService.getFeedbacks().subscribe (
     (feedbacks: any) => {
       this.feedbacks = feedbacks.data;
-      console.error(this.feedbacks);
     },
     (error: any) => {
       console.error('Error with loading list of feedbacks');
