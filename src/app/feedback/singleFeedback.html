@@ -1,19 +1,33 @@
-
 <div class="hero-body">
   <div class="container">
     <section class="hero is-primary is-bold">
     <div class="hero-body">
-      <span class="container card-container">
+      <span class="container">
           <div class="feedback-page">
-            <div class="row">
-             <img src="{{singleFeed.user.picture_url}}" alt="logo"/>
-             <section class='user-identity col-md-4'>
-               <h1 class="user-name">{{ singleFeed.user.fullname }}</h1>
-               <p *ngIf='singleFeed.user.country'><b>Country:</b> {{ singleFeed.user.country.translations[0].name }}</p>
-               <p><b>Speciality:</b> {{ singleFeed.user.specialty.translations[0].name }}</p>
-             </section>
-             <section class='user-review col-md-6'>
-               <b>Review:</b> {{ singleFeed.translations[0].content }}
+            <div class="row wavy">
+              <img class="user-picture pull-left" src="{{singleFeed.user.picture_url}}" alt="logo"/>
+              <section class='user-identity pull-right'>
+                <p><b>Firstname:</b> {{ singleFeed.user.first_name }}</p>
+                <p><b>Lastname:</b> {{ singleFeed.user.last_name }}</p>
+                <p *ngIf='singleFeed.user.country'><b>Country:</b> {{ singleFeed.user.country.translations[0].name }}</p>
+                <p><b>Speciality:</b> {{ singleFeed.user.specialty.translations[0].name }}</p>
+              </section>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
+              <circle fill="white" cx="0" cy="100" r="100" />
+              <circle fill="white" cx="200" cy="100" r="100" />
+            </svg>
+             </div>
+             <div class="row">
+             <section style="text-align: center;" class='user-review col-md-12'>
+               <h1>Review</h1>
+               <span class= 'radio-btn' *ngFor='let review of reviews'>
+               <label class= "radio" >
+                 <input type="radio" name="locale" value="{{ review.locale }}"  [(ngModel)]= "localeModel" (ngModelChange)="updateSelectedValue($event);" class="hidden"/>
+                 <span class="label"></span><b>{{ review.locale }}</b>
+               </label>
+               </span>
+               <br/>
+               <p><i><span class="quotes"></span>{{ selectedReview }}<span class="quotes"></span></i></p>
              </section>
              </div>
           </div>
