@@ -10,11 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './feedback-list.component.html',
 })
 export class FeedbackListComponent implements OnInit {
-  name: string;
-  email: string;
-  message: string;
-  feedbacks: any;
-  singlefb: any;
+  feedbacks: object;
 
   constructor(
     public feedbackService: FeedbackService,
