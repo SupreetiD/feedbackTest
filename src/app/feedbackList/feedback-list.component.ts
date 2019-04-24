@@ -1,11 +1,13 @@
+/* Component for displaying all the feedbacks together */
+
 import { Component, OnInit } from '@angular/core';
-import {FeedbackService} from '../services/feedbackService';
-import { SingleFeedbackComponent } from '../feedback/singleFeedback.component';
+import {FeedbackService} from '../services/feedback.service';
+import { SingleFeedbackComponent } from '../feedback/single-feedback.component';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feedback-list',
-  templateUrl: './feedbackList.html',
+  templateUrl: './feedback-list.component.html',
 })
 export class FeedbackListComponent implements OnInit {
   name: string;

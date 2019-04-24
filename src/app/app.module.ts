@@ -7,9 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SingleFeedbackComponent } from './feedback/singleFeedback.component';
-import { FeedbackListComponent } from './feedbackList/feedbackList.component';
-import {FeedbackService} from './services/feedbackService';
+import { SingleFeedbackComponent } from './feedback/single-feedback.component';
+import { FeedbackListComponent } from './feedbackList/feedback-list.component';
+import {FeedbackService} from './services/feedback.service';
 
 @NgModule({
   declarations: [

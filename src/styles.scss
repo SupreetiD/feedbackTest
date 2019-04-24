@@ -77,7 +77,6 @@ section {
             line-height: 1;
           }
           .separator {
-            width: 6px;
             height: 155px;
             background: #3137aa;
             margin-right: 20px;
@@ -170,4 +169,15 @@ svg {
   font-size: 60px;
   font-family: cursive;
   color: #3137aa;
+}
+
+@media only screen and (min-width: 500px) {
+  section .separator {
+    width: 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section .separator {
+    width: 6px;
+  }
 }

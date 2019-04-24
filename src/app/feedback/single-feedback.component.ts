@@ -1,9 +1,11 @@
+/* Component for displaying one feedback */
+
 import { Component, OnInit } from '@angular/core';
-import {FeedbackService} from '../services/feedbackService';
+import {FeedbackService} from '../services/feedback.service';
 
 @Component({
   selector: 'app-single-feedback',
-  templateUrl: './singleFeedback.html'
+  templateUrl: './single-feedback.component.html'
 })
 export class SingleFeedbackComponent implements OnInit {
   singleFeed: any;

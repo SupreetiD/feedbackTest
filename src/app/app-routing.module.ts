@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FeedbackListComponent } from './feedbackList/feedbackList.component';
-import { SingleFeedbackComponent } from './feedback/singleFeedback.component';
+import { FeedbackListComponent } from './feedbackList/feedback-list.component';
+import { SingleFeedbackComponent } from './feedback/single-feedback.component';
 
 const routes: Routes = [
   {

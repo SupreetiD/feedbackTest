@@ -5,6 +5,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class FeedbackService  {
+  /* storage is initialized to store the selected review.
+  This prevents calling the API https://api.imcas.com/v1/feedbacks/{id}
+  as the contents are similar.
+  */
   storage: any = '';
   constructor(private http: Http) {
   }
