@@ -24,11 +24,9 @@ export class SingleFeedbackComponent implements OnInit {
 
   updateSelectedValue(event: any) {
     const me: any = this;
-    console.log('xftcygvui: ', event);
     (me.reviews).forEach(function(review: any) {
       if (review.locale === event ) {
         me.selectedReview = review.content;
-        console.log('review: ', me.selectedReview);
       }
     });
   }

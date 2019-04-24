@@ -10,7 +10,7 @@ export class FeedbackService  {
   }
 
   getFeedbacks(): Observable<any>  {
-  return this.http.get('http://api.imcas.com/v1/feedbacks')
+  return this.http.get('https://api.imcas.com/v1/feedbacks')
       .map((res: Response) => res.json());
   }
 }
